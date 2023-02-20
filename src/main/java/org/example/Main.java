@@ -24,10 +24,10 @@ public class Main {
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery(query);
 
-            while (result.next()) {
+            while (result.next()) {  //iscitavamo redove
                 /*String spisakNovela = "";
                 for (int i = 1; i < 4; i++) {
-                    spisakNovela += result.getString(i) + ":";
+                    spisakNovela += result.getString(i) + ":"; //iscitavam kolone i spajam ih u string sa dvotackom
                 }
                 System.out.println(spisakNovela);*/
 
