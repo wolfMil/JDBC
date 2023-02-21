@@ -10,7 +10,7 @@ public class Main {
         String password = "";
         String query = "SELECT * FROM books.novels";
 
-        /*try {
+        /*try {                             // sluzi samo da testiramo da li smo uspesno registrovali drajver
             Class.forName(("com.mysql.cj.jdbc.Driver"));
             System.out.println("Uspesno uvezen drajver!");
         } catch (ClassNotFoundException e) {
