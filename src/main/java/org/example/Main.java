@@ -10,11 +10,11 @@ public class Main {
         String password = "";
         String query = "SELECT * FROM books.novels";
 
-        /*try {                             // sluzi samo da testiramo da li smo uspesno registrovali drajver
+        /*try {                             // just for registration testing
             Class.forName(("com.mysql.cj.jdbc.Driver"));
-            System.out.println("Uspesno uvezen drajver!");
+            System.out.println("Successfully registrated driver!");
         } catch (ClassNotFoundException e) {
-            System.err.println("Greska!");
+            System.err.println("Registration error!");
             e.printStackTrace();
         }*/
 
@@ -24,12 +24,7 @@ public class Main {
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery(query);
 
-            while (result.next()) {  //iscitavamo redove
-                /*String spisakNovela = "";
-                for (int i = 1; i < 4; i++) {
-                    spisakNovela += result.getString(i) + ":"; //iscitavam kolone i spajam ih u string sa dvotackom
-                }
-                System.out.println(spisakNovela);*/
+            while (result.next()) {  //reading lines
 
                 String author_name = result.getString("author_name");
                 String author_lastname = result.getString("author_lastname");
