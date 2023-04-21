@@ -10,11 +10,11 @@ public class Main {
         String password = "";
         String query = "SELECT * FROM books.novels";
 
-        /*try {                             // just to test if driver is working
+        /*try {                             // sluzi samo da testiramo da li smo uspesno registrovali drajver
             Class.forName(("com.mysql.cj.jdbc.Driver"));
-            System.out.println("Successfully imported driver!");
+            System.out.println("Uspesno uvezen drajver!");
         } catch (ClassNotFoundException e) {
-            System.err.println("Importing error!");
+            System.err.println("Greska!");
             e.printStackTrace();
         }*/
 
@@ -24,12 +24,12 @@ public class Main {
             Statement statement = conn.createStatement();
             ResultSet result = statement.executeQuery(query);
 
-            while (result.next()) {  //reading lines
-                /*String listOfNovels = "";
+            while (result.next()) {  //iscitavamo redove
+                /*String spisakNovela = "";
                 for (int i = 1; i < 4; i++) {
-                    listOfNovels += result.getString(i) + ":"; //reading columns and concatenating into string with colon
+                    spisakNovela += result.getString(i) + ":"; //iscitavam kolone i spajam ih u string sa dvotackom
                 }
-                System.out.println(listOfNovels);*/
+                System.out.println(spisakNovela);*/
 
                 String author_name = result.getString("author_name");
                 String author_lastname = result.getString("author_lastname");
